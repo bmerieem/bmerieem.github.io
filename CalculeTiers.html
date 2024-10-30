@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculateur de Tiers de Nuit</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1 id="title">Calculateur de Tiers de Nuit</h1>
+    
+    <label id="labelSunset" for="sunset">Heure du Coucher de Soleil :</label>
+    <input type="time" id="sunset" required>
+    
+    <label id="labelFajr" for="fajr">Heure de la Prière du Matin (Fajr) :</label>
+    <input type="time" id="fajr" required>
+    
+    <button onclick="calculateTiers()" id="calculateButton">Calculer les Tiers</button>
+    <button onclick="resetFields()" id="resetButton">Réinitialiser</button>
+    
+    <div class="result" id="result"></div>
+
+    <div class="language-select">
+      <label for="language">Choisissez la langue :</label>
+      <select id="language" onchange="changeLanguage()">
+        <option value="fr">Français</option>
+        <option value="en">English</option>
+      </select>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
